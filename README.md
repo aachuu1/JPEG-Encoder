@@ -58,19 +58,9 @@ result, history = jpeg_compress_with_mse_threshold(X, Q_jpeg, mse_target=100)
 
 ### Video Compression
 ```python
-# Option 1: Generated test video
+# Generated test video
 video = create_test_video(frames=30, size=(128, 128))
 
-# Option 2: Load from file
-video = load_video_from_file('myvideo.mp4', max_frames=30, resize_to=(128, 128))
 
-# Option 3: Download from YouTube
-video_path = download_youtube_video('https://youtube.com/watch?v=...')
-video = load_video_from_file(video_path)
-
-# Compress
-video_simple = compress_video_as_images(video, Q_jpeg)
-video_motion = compress_video_with_motion(video, Q_jpeg)
-```
 
 
